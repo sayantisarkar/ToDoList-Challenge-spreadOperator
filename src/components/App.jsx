@@ -7,17 +7,13 @@ function App() {
   function handleInput(event) {
     const { value } = event.target;
     setInput(value);
-    //console.log(inputVal);
   }
   function addInput() {
-    // setInput()
     console.log(inputVal);
-    //items.push(inputVal);
     setItemsList((prevArray) => {
       return [...prevArray, inputVal];
     });
     setInput(""); //clearing the present text box value to blank to dynamically show as binded to value
-    //console.log(items);
   }
   return (
     <div className="container">
