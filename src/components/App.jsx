@@ -16,7 +16,8 @@ function App() {
     setItemsList((prevArray) => {
       return [...prevArray, inputVal];
     });
-    console.log(items);
+    setInput(""); //clearing the present text box value to blank to dynamically show as binded to value
+    //console.log(items);
   }
   return (
     <div className="container">
@@ -24,7 +25,7 @@ function App() {
         <h1>To-Do List</h1>
       </div>
       <div className="form">
-        <input onChange={handleInput} type="text" />
+        <input onChange={handleInput} type="text" value={inputVal} />
         <button onClick={addInput}>
           <span>Add</span>
         </button>
